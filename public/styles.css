@@ -1,0 +1,138 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4; /* Light background color */
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    color: #333; /* Darker text for contrast */
+    margin-bottom: 20px; /* Spacing below the header */
+    font-size: 2.5em; /* Larger font size for the main header */
+}
+
+h2 {
+    text-align: center;
+    color: #555; /* Slightly lighter text for subheading */
+    margin-top: 30px; /* Spacing above the subheading */
+    font-size: 1.5em; /* Slightly larger font size for the subheading */
+}
+
+/* Product container to arrange cards */
+.product-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap onto the next line */
+    justify-content: space-between; /* Space cards evenly */
+    gap: 20px; /* Gap between cards for better spacing */
+}
+
+/* Individual product card styles */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+    margin: 10px; /* Spacing around cards */
+    padding: 20px; /* Increased padding for better spacing inside */
+    width: calc(25% - 20px); /* Width set to allow four cards in one row, accounting for gaps */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation for hover effect */
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Product name style */
+.product-name {
+    font-size: 1.2em; /* Slightly larger font size for product name */
+    font-weight: bold;
+    margin: 15px 0; /* Increased spacing above and below product name */
+    color: #333; /* Dark color for product name */
+}
+
+/* Review text style */
+.review-text {
+    font-size: 0.95em; /* Regular font size for review text */
+    color: #555;
+    margin: 10px 0; /* Spacing above and below review text */
+}
+
+/* Rating style */
+.rating {
+    font-size: 1em;
+    color: #FFD700; /* Gold color for rating stars */
+}
+
+/* Loading message */
+#loading-message {
+    text-align: center;
+    font-size: 1.2em; /* Increased font size for loading message */
+    color: #666;
+}
+
+/* Image styling to ensure uniformity */
+.product-card img {
+    width: 100%; /* Make image take the full width of the card */
+    height: 150px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Maintain aspect ratio while covering the area */
+    border-radius: 8px; /* Optional: rounded corners for images */
+}
+
+/* Form styles */
+form {
+    margin-top: 30px; /* Increased spacing above form */
+    text-align: center; /* Center form elements */
+}
+
+form input,
+form textarea,
+form button {
+    width: 90%; /* Full width for form elements */
+    max-width: 400px; /* Max width for form elements */
+    padding: 12px; /* Increased padding for form elements */
+    margin: 5px 0;
+    border-radius: 6px; /* Slightly rounded corners for form elements */
+    border: 1px solid #ddd;
+    transition: border-color 0.2s; /* Smooth transition for border color */
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #28a745; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+
+form button {
+    background-color: #28a745; /* Green button */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1em; /* Consistent font size for button */
+    padding: 12px; /* Increased padding for better button appearance */
+    transition: background-color 0.2s; /* Smooth transition for background color */
+}
+
+form button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.hidden {
+    display: none; /* Class to hide elements */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .product-card {
+        width: calc(50% - 20px); /* Two cards per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%; /* One card per row on small screens */
+    }
+}
